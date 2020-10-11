@@ -14,9 +14,9 @@ const tempArr = [{
 function App() {
   return (
     <div className="App" data-test="appComponent">
-      <Header/>
+      <Header />
       <section className="main">
-      <Headline header="Posts" desc="Click the button to render posts!" tempArr={tempArr} />
+        <Headline header="Posts" desc="Click the button to render posts!" tempArr={tempArr} />
       </section>
     </div>
   );

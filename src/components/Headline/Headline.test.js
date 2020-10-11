@@ -10,6 +10,25 @@ const setUp = (props={}) => {
 };
 
 describe('Headline component', ()=>{
+
+    describe('checking proptypes',()=>{
+        it('should not throw a warning', ()=>{
+            const expectedProps = {
+                header: 'Test Header',
+                desc: 'Test Desc',
+                tempArr: [{
+                    fName: 'Test fName',
+                    lName: 'Test lName',
+                    email: 'test@email.com',
+                    age: 23,
+                    onlineStatus: false
+                }]
+            };
+            const propsErr = checkProps(Headline, expectedProps)
+            expect(propsErr).toBeUndefined();
+        })
+    })
+
     describe('have props', ()=>{
         let wrapper;
         beforeEach(()=>{
@@ -36,6 +55,8 @@ describe('Headline component', ()=>{
         })
 
     });
+
+
     describe('have no props', ()=>{
         let wrapper;
         beforeEach(()=>{
